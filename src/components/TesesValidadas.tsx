@@ -15,9 +15,9 @@ const teses = [
 
 export default function TesesValidadas() {
   return (
-    <section className="section bg-[rgba(255,255,255,0.01)] relative border-y border-[rgba(255,255,255,0.05)] overflow-hidden">
+    <section className="section bg-[#050505] relative border-y border-[rgba(255,255,255,0.05)] overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] glow-blue opacity-20 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#00BAFF] blur-[150px] opacity-10 pointer-events-none" />
 
       <div className="container-page relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -33,8 +33,10 @@ export default function TesesValidadas() {
                 Você não precisa pagar pela nossa curva de aprendizado. Com dezenas de milhões de reais já gerenciados em anúncios jurídicos, nós já mapeamos exatamente quais argumentos, palavras-chave e landing pages convertem para as teses mais rentáveis do direito.
               </p>
               
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-[rgba(22,48,223,0.05)] border border-[rgba(22,48,223,0.2)] mt-2">
-                <Target size={28} color="#1630DF" className="flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-4 p-8 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.05)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_20px_40px_rgba(0,0,0,0.5)] mt-4">
+                <div className="w-12 h-12 rounded-xl bg-[#1630DF]/20 border border-[#1630DF]/30 flex flex-shrink-0 items-center justify-center">
+                  <Target size={24} color="#6075ff" />
+                </div>
                 <div>
                   <h4 className="text-white font-bold text-lg mb-2">Sem "Testes com o seu dinheiro"</h4>
                   <p className="text-[rgba(255,255,255,0.7)] text-[0.95rem] leading-relaxed m-0">

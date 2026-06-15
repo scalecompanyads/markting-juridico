@@ -12,14 +12,14 @@ export default function Hero() {
   const { open } = useLeadForm();
 
   return (
-    <section className="relative h-[100svh] md:h-screen flex flex-col overflow-hidden bg-[#020b16] md:pb-0">
+    <section className="relative h-[100dvh] md:h-screen flex flex-col overflow-hidden bg-[#020b16] md:pb-0">
       
       {/* Mobile Image Container */}
-      <div className="absolute top-0 inset-x-0 w-full md:hidden h-[45vh] z-0">
+      <div className="absolute top-0 inset-x-0 w-full md:hidden h-[45dvh] z-0 -translate-y-4">
         <img 
           src="/images/hero-mobile-bg.png" 
           alt="Scale Company" 
-          className="w-full h-full object-cover object-[center_10%]"
+          className="w-full h-full object-cover object-[center_30%]"
         />
         {/* Mobile Overlay: Apenas na metade de baixo para não invadir o rosto/topo */}
         <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-[#020b16] to-transparent" />
@@ -80,27 +80,6 @@ export default function Hero() {
           </div>
 
         </motion.div>
-      </div>
-
-      {/* Logo Marquee inside Hero */}
-      <div className="scale-v3-hero-shell !p-0 !m-0 !max-w-full relative z-10 w-full">
-        <div className="brands-shell !border-t-0 !pb-4 w-full">
-          <p className="brands-label !mb-2">Escritórios que confiam na Scale</p>
-          <div className="brands w-full" aria-label="Escritorios de advocacia que ja confiaram na Scale">
-            <div className="brands-track">
-              {legalLogos.map((logo) => (
-                <div className="brand-item" key={logo.src}>
-                  <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
-                </div>
-              ))}
-              {legalLogos.map((logo) => (
-                <div className="brand-item brand-item--clone" key={`${logo.src}-clone`} aria-hidden="true">
-                  <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Bottom transition border */}

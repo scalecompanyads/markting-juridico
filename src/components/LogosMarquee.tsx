@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { type LegalLogo, legalLogos } from '@/data/legalLogos';
+import '@/styles/scale-advogados-v3-hero.css';
 
 const areas = [
   "Direito Previdenciário",
@@ -52,9 +54,36 @@ function AnimatedCounter({ value, prefix = "", suffix = "" }: { value: number; p
 
 export default function LogosMarquee() {
   return (
-    <section className="relative py-24 bg-white border-y border-[rgba(0,0,0,0.05)] overflow-hidden">
-      
-      <div className="container-page relative z-10">
+    <>
+      {/* Dark Logo Marquee Strip */}
+      <section className="bg-[#020b16] py-10 overflow-hidden">
+        <div className="scale-v3-hero-shell !p-0 !m-0 !max-w-full">
+          <div className="brands-shell !border-t-0 !pb-0 w-full">
+            <p className="brands-label !mb-6">Escritórios que confiam na Scale</p>
+            <div className="brands w-full" aria-label="Escritorios de advocacia que ja confiaram na Scale">
+              <div className="brands-track">
+                {legalLogos.map((logo) => (
+                  <div className="brand-item" key={logo.src}>
+                    <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
+                  </div>
+                ))}
+                {legalLogos.map((logo) => (
+                  <div className="brand-item brand-item--clone" key={`${logo.src}-clone`} aria-hidden="true">
+                    <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Bottom border to separate from white section cleanly */}
+        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.05)] to-transparent" />
+      </section>
+
+      {/* Existing Stats Section */}
+      <section className="relative py-24 bg-white border-y border-[rgba(0,0,0,0.05)] overflow-hidden">
+        
+        <div className="container-page relative z-10">
         
         {/* Certifications */}
         <motion.div 
@@ -113,5 +142,6 @@ export default function LogosMarquee() {
         </div>
       </div>
     </section>
+    </>
   );
 }

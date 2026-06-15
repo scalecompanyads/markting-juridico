@@ -28,7 +28,7 @@ export default function ExpertiseSEO() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="relative z-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* Card 1: Tráfego Pago */}
           <motion.div 
@@ -83,13 +83,13 @@ export default function ExpertiseSEO() {
 
         </div>
 
-        <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="mt-16 md:mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="relative aspect-square md:aspect-auto md:h-[500px] border border-[rgba(255,255,255,0.05)] bg-[rgba(1,15,28,0.5)] p-10 flex flex-col justify-center overflow-hidden"
+            className="relative min-h-[400px] md:h-[500px] border border-[rgba(255,255,255,0.05)] bg-[rgba(1,15,28,0.5)] p-8 md:p-10 flex flex-col justify-center overflow-hidden"
           >
              {/* Decorative lines */}
              <div className="absolute top-0 right-0 w-[1px] h-full bg-gradient-to-b from-transparent via-[rgba(255,255,255,0.1)] to-transparent" />

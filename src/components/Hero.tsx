@@ -5,47 +5,50 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLeadForm } from "@/contexts/LeadFormContext";
 
+import { type LegalLogo, legalLogos } from '@/data/legalLogos';
+import '@/styles/scale-advogados-v3-hero.css';
+
 export default function Hero() {
   const { open } = useLeadForm();
 
   return (
-    <section className="relative min-h-[100svh] md:min-h-screen flex flex-col justify-end md:justify-center overflow-hidden bg-[#020b16] pt-[120px] pb-12 md:pt-0 md:pb-0">
+    <section className="relative h-[100svh] md:h-screen flex flex-col overflow-hidden bg-[#020b16] md:pb-0">
       
-      {/* Mobile Background Image */}
-      <div 
-        className="absolute inset-0 md:hidden bg-[url('/images/hero-mobile-bg.png')] bg-cover bg-top bg-no-repeat z-0" 
-      />
-      
+      {/* Mobile Image Container */}
+      <div className="relative w-full md:hidden flex-shrink-0 h-[35vh] max-h-[300px]">
+        <img 
+          src="/images/hero-mobile-bg.png" 
+          alt="Scale Company" 
+          className="w-full h-full object-cover object-top"
+        />
+        {/* Mobile Overlay: Apenas na metade de baixo para não invadir o rosto/topo */}
+        <div className="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-[#020b16] to-transparent" />
+      </div>
+
       {/* Desktop Background Image */}
       <div 
         className="hidden md:block absolute inset-0 bg-[url('/images/hero-desktop-bg.png')] bg-cover bg-center bg-no-repeat z-0" 
       />
 
-      {/* Overlays */}
-      {/* Mobile Overlay: Escuro embaixo, transparente em cima */}
-      <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#020b16] via-[#020b16] via-45% to-transparent z-0" />
-
-      {/* Desktop Overlay: Escuro na esquerda, transparente na direita */}
-      {/* Limitei a largura (w-[60%]) para que não vá tão para a direita */}
+      {/* Desktop Overlay */}
       <div className="hidden md:block absolute inset-y-0 left-0 w-[60%] bg-gradient-to-r from-[#020b16] via-[#020b16]/90 to-transparent z-0" />
 
-      <div className="container-page relative z-10 w-full mt-auto md:mt-0">
-        {/* max-w reduzido para evitar texto muito largo */}
+      <div className="container-page relative z-10 w-full flex-grow flex flex-col justify-center pb-4 pt-2 md:py-0">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-start text-left max-w-full md:max-w-[550px]"
+          className="flex flex-col items-center text-center md:items-start md:text-left max-w-full md:max-w-[550px]"
         >
           
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.03)] text-[rgba(255,255,255,0.8)] text-xs font-bold tracking-[0.15em] uppercase backdrop-blur-sm mb-6">
+          {/* Badge (Hidden on Mobile) */}
+          <div className="hidden md:inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.03)] text-[rgba(255,255,255,0.8)] text-xs font-bold tracking-[0.15em] uppercase backdrop-blur-sm mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6] inline-block" />
             Especialistas em Marketing Jurídico
           </div>
 
           {/* H1 */}
-          <h1 className="text-[clamp(2rem,3.5vw,3.5rem)] font-bold leading-[1.1] tracking-tight text-white m-0 mb-6">
+          <h1 className="text-[clamp(1.75rem,4.5vw,3.5rem)] font-bold leading-[1.1] tracking-tight text-white m-0 mb-4">
             Agência de Marketing Jurídico que Entrega a Sua{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#1630DF]">
               Máquina de Aquisição
@@ -54,35 +57,53 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <div className="flex flex-col gap-4 mb-8">
-            <p className="text-[clamp(1rem,1.2vw,1.15rem)] font-medium text-[rgba(255,255,255,0.85)] leading-relaxed m-0">
+          <div className="flex flex-col gap-3 mb-6">
+            <p className="text-[clamp(0.9rem,1.2vw,1.15rem)] font-medium text-[rgba(255,255,255,0.85)] leading-relaxed m-0">
               Esqueça o amadorismo de ter que contratar um gestor de tráfego, um designer e um editor separados.
             </p>
-            <p className="text-[0.95rem] md:text-base text-[rgba(255,255,255,0.85)] leading-relaxed m-0">
-              Nós estruturamos, executamos e otimizamos 100% da sua captação de clientes com previsibilidade e total respeito às normas da OAB.{" "}
-              <strong className="text-white font-medium">Do primeiro clique ao contrato fechado.</strong>
+            <p className="text-[0.85rem] md:text-base text-[rgba(255,255,255,0.85)] leading-relaxed m-0">
+              Nós estruturamos, executamos e otimizamos 100% da sua captação de clientes.{" "}
+              <strong className="text-white font-medium block mt-1 md:inline md:mt-0">Do primeiro clique ao contrato fechado.</strong>
             </p>
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col items-start gap-4 w-full md:w-auto">
+          <div className="flex flex-col items-center md:items-start gap-3 w-full md:w-auto">
             <button
               onClick={open}
-              className="inline-flex items-center justify-center gap-2 bg-[#3B82F6] text-white font-bold text-sm uppercase tracking-widest px-8 py-4 hover:bg-[#1630DF] transition-colors duration-300 w-full md:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-[#3B82F6] text-white font-bold text-[0.8rem] md:text-sm uppercase tracking-widest px-6 py-3 hover:bg-[#1630DF] transition-colors duration-300 w-full md:w-auto"
             >
-  <WhatsAppIcon size={20} />
-  Agendar Diagnóstico Gratuito
-</button>
-            <span className="text-[0.85rem] text-[rgba(255,255,255,0.85)]">
-              Entenda onde seu escritório está perdendo dinheiro hoje.
-            </span>
+              <WhatsAppIcon size={18} />
+              Agendar Diagnóstico Gratuito
+            </button>
           </div>
 
         </motion.div>
       </div>
 
+      {/* Logo Marquee inside Hero */}
+      <div className="scale-v3-hero-shell !p-0 !m-0 !max-w-full relative z-10 w-full">
+        <div className="brands-shell !border-t-0 !pb-4 w-full">
+          <p className="brands-label !mb-2">Escritórios que confiam na Scale</p>
+          <div className="brands w-full" aria-label="Escritorios de advocacia que ja confiaram na Scale">
+            <div className="brands-track">
+              {legalLogos.map((logo) => (
+                <div className="brand-item" key={logo.src}>
+                  <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
+                </div>
+              ))}
+              {legalLogos.map((logo) => (
+                <div className="brand-item brand-item--clone" key={`${logo.src}-clone`} aria-hidden="true">
+                  <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom transition border */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.1)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.1)] to-transparent z-20" />
     </section>
   );
 }

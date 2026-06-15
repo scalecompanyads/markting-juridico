@@ -2,12 +2,10 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogosMarquee from "@/components/LogosMarquee";
 import Problem from "@/components/Problem";
-import Solution from "@/components/Solution";
-import Testimonials from "@/components/Testimonials";
+import ExpertiseSEO from "@/components/ExpertiseSEO";
 import Team from "@/components/Team";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
-import TesesValidadas from "@/components/TesesValidadas";
 import { FinalCTA, Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -18,9 +16,7 @@ export default function Home() {
         <Hero />
         <LogosMarquee />
         <Problem />
-        <Solution />
-        <TesesValidadas />
-        <Testimonials />
+        <ExpertiseSEO />
         <Team />
         <About />
         <FAQ />

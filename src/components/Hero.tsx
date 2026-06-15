@@ -1,203 +1,88 @@
 "use client";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { useLeadForm } from "@/contexts/LeadFormContext";
 
 export default function Hero() {
   const { open } = useLeadForm();
 
   return (
-    <section
-      style={{
-        position: "relative",
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        paddingTop: "100px",
-        paddingBottom: "4rem",
-        overflow: "hidden",
-      }}
-    >
-      {/* Background grid */}
-      <div
-        className="bg-grid"
-        style={{
-          position: "absolute",
-          inset: 0,
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
+    <section className="relative min-h-[100svh] md:min-h-screen flex flex-col justify-end md:justify-center overflow-hidden bg-[#020b16] pt-[120px] pb-12 md:pt-0 md:pb-0">
+      
+      {/* Mobile Background Image */}
+      <div 
+        className="absolute inset-0 md:hidden bg-[url('/images/hero-mobile-bg.png')] bg-cover bg-top bg-no-repeat z-0" 
+      />
+      
+      {/* Desktop Background Image */}
+      <div 
+        className="hidden md:block absolute inset-0 bg-[url('/images/hero-desktop-bg.png')] bg-cover bg-center bg-no-repeat z-0" 
       />
 
-      {/* Ambient glows */}
-      <div
-        className="glow-cyan"
-        style={{
-          position: "absolute",
-          top: "-15%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "800px",
-          height: "500px",
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        className="glow-blue"
-        style={{
-          position: "absolute",
-          bottom: "0",
-          left: "0",
-          width: "500px",
-          height: "400px",
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      />
+      {/* Overlays */}
+      {/* Mobile Overlay: Escuro embaixo, transparente em cima */}
+      <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#020b16] via-[#020b16] via-45% to-transparent z-0" />
 
-      <div className="container-page" style={{ position: "relative", zIndex: 10 }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "2.5rem",
-            textAlign: "center",
-          }}
+      {/* Desktop Overlay: Escuro na esquerda, transparente na direita */}
+      {/* Limitei a largura (w-[60%]) para que não vá tão para a direita */}
+      <div className="hidden md:block absolute inset-y-0 left-0 w-[60%] bg-gradient-to-r from-[#020b16] via-[#020b16]/90 to-transparent z-0" />
+
+      <div className="container-page relative z-10 w-full mt-auto md:mt-0">
+        {/* max-w reduzido para evitar texto muito largo */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col items-start text-left max-w-full md:max-w-[550px]"
         >
+          
           {/* Badge */}
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              padding: "0.4rem 1rem",
-              borderRadius: "9999px",
-              border: "1px solid rgba(0,186,255,0.3)",
-              background: "rgba(0,186,255,0.08)",
-              fontSize: "0.75rem",
-              fontWeight: 700,
-              color: "#00BAFF",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            <span
-              style={{
-                width: "6px",
-                height: "6px",
-                borderRadius: "50%",
-                background: "#00BAFF",
-                display: "inline-block",
-              }}
-            />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.03)] text-[rgba(255,255,255,0.8)] text-xs font-bold tracking-[0.15em] uppercase backdrop-blur-sm mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6] inline-block" />
             Especialistas em Marketing Jurídico
           </div>
 
           {/* H1 */}
-          <h1
-            style={{
-              fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)",
-              fontWeight: 800,
-              lineHeight: 1.08,
-              letterSpacing: "-0.03em",
-              maxWidth: "900px",
-              margin: 0,
-              background: "linear-gradient(to bottom, #ffffff 30%, #a1a1aa 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
+          <h1 className="text-[clamp(2rem,3.5vw,3.5rem)] font-bold leading-[1.1] tracking-tight text-white m-0 mb-6">
             Agência de Marketing Jurídico que Entrega a Sua{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #00BAFF 0%, #1630DF 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#1630DF]">
               Máquina de Aquisição
             </span>{" "}
             Pronta.
           </h1>
 
           {/* Subheadline */}
-          <p
-            style={{
-              fontSize: "clamp(1.1rem, 2vw, 1.35rem)",
-              fontWeight: 600,
-              color: "rgba(255,255,255,0.75)",
-              maxWidth: "750px",
-              lineHeight: 1.5,
-              margin: 0,
-            }}
-          >
-            Esqueça o amadorismo de ter que contratar um gestor de tráfego, um designer e um editor separados.
-          </p>
-
-          <p
-            style={{
-              fontSize: "1rem",
-              color: "rgba(255,255,255,0.5)",
-              maxWidth: "680px",
-              lineHeight: 1.7,
-              margin: 0,
-            }}
-          >
-            Nós estruturamos, executamos e otimizamos 100% da sua captação de clientes com previsibilidade e total respeito às normas da OAB.{" "}
-            <strong style={{ color: "#fff", fontWeight: 600 }}>
-              Do primeiro clique ao contrato fechado.
-            </strong>
-          </p>
-
-          {/* CTAs */}
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "1rem",
-            }}
-          >
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
-              <button
-                onClick={open}
-                className="btn-shiny"
-                style={{ fontSize: "1rem", padding: "1rem 2.25rem", width: "100%", maxWidth: "450px" }}
-                id="hero-cta-primary"
-              >
-                Agendar Diagnóstico Gratuito da Minha Captação
-                <ArrowRight size={18} />
-              </button>
-              <span style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.4)" }}>
-                Entenda onde seu escritório está perdendo dinheiro hoje.
-              </span>
-            </div>
+          <div className="flex flex-col gap-4 mb-8">
+            <p className="text-[clamp(1rem,1.2vw,1.15rem)] font-medium text-[rgba(255,255,255,0.85)] leading-relaxed m-0">
+              Esqueça o amadorismo de ter que contratar um gestor de tráfego, um designer e um editor separados.
+            </p>
+            <p className="text-[0.95rem] md:text-base text-[rgba(255,255,255,0.85)] leading-relaxed m-0">
+              Nós estruturamos, executamos e otimizamos 100% da sua captação de clientes com previsibilidade e total respeito às normas da OAB.{" "}
+              <strong className="text-white font-medium">Do primeiro clique ao contrato fechado.</strong>
+            </p>
           </div>
 
+          {/* CTAs */}
+          <div className="flex flex-col items-start gap-4 w-full md:w-auto">
+            <button
+              onClick={open}
+              className="inline-flex items-center justify-center gap-2 bg-[#3B82F6] text-white font-bold text-sm uppercase tracking-widest px-8 py-4 hover:bg-[#1630DF] transition-colors duration-300 w-full md:w-auto"
+            >
+  <WhatsAppIcon size={20} />
+  Agendar Diagnóstico Gratuito
+</button>
+            <span className="text-[0.85rem] text-[rgba(255,255,255,0.85)]">
+              Entenda onde seu escritório está perdendo dinheiro hoje.
+            </span>
+          </div>
 
-        </div>
+        </motion.div>
       </div>
 
-      {/* Bottom fade */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: "120px",
-          background:
-            "linear-gradient(to top, #010f1c, transparent)",
-          pointerEvents: "none",
-          zIndex: 5,
-        }}
-      />
+      {/* Bottom transition border */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.1)] to-transparent" />
     </section>
   );
 }

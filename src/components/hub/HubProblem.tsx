@@ -66,7 +66,7 @@ export default function HubProblem() {
         
         <div className="max-w-[800px] mx-auto text-center border border-[rgba(255,255,255,0.1)] rounded-2xl p-10 bg-[rgba(255,255,255,0.02)]">
            <h3 className="text-2xl font-bold text-white mb-4">A advocacia não aceita testes amadores.</h3>
-           <p className="text-[rgba(255,255,255,0.7)] text-lg leading-relaxed m-0">
+           <p className="text-[rgba(255,255,255,0.85)] text-lg leading-relaxed m-0">
              Para captar clientes de alto ticket (honorários acima de 5, 10 ou 50 mil reais), você não precisa de mais um "criativo viral". Você precisa de uma engenharia de vendas desenhada especificamente para a mentalidade de quem tem um problema jurídico urgente.
            </p>
         </div>

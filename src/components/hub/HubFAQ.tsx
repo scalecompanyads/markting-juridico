@@ -47,11 +47,11 @@ export default function HubFAQ() {
                   </h3>
                   <ChevronDown 
                     size={20} 
-                    className={`flex-shrink-0 text-[#00BAFF] transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} 
+                    className={`flex-shrink-0 text-[#3B82F6] transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} 
                   />
                 </div>
                 <div 
-                  className="px-6 text-[rgba(255,255,255,0.7)] leading-relaxed transition-all duration-300 ease-in-out"
+                  className="px-6 text-[rgba(255,255,255,0.85)] leading-relaxed transition-all duration-300 ease-in-out"
                   style={{
                     maxHeight: isOpen ? "300px" : "0",
                     paddingBottom: isOpen ? "1.5rem" : "0",

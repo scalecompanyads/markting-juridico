@@ -22,11 +22,11 @@ export default function HubOAB() {
                 Ela <strong>não proíbe você de ser encontrado</strong> por quem já está ativamente procurando ajuda.
               </p>
               
-              <div className="mt-4 flex items-start gap-4 p-6 rounded-xl bg-[rgba(0,186,255,0.05)] border border-[rgba(0,186,255,0.2)]">
-                <ShieldCheck size={28} color="#00BAFF" className="flex-shrink-0 mt-1" />
+              <div className="mt-4 flex items-start gap-4 p-6 rounded-xl bg-[rgba(59,130,246,0.05)] border border-[rgba(59,130,246,0.2)]">
+                <ShieldCheck size={28} color="#3B82F6" className="flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="text-white font-bold text-lg mb-2">100% de Adequação ao Provimento 205/2021</h4>
-                  <p className="text-[rgba(255,255,255,0.7)] text-[0.95rem] leading-relaxed m-0">
+                  <p className="text-[rgba(255,255,255,0.85)] text-[0.95rem] leading-relaxed m-0">
                     Nossas campanhas na Rede de Pesquisa são puramente informativas (Inbound). Não convencemos ninguém a processar ninguém. Apenas posicionamos o seu escritório no topo do Google no exato momento em que o cliente pesquisa pela solução da dor dele.
                   </p>
                 </div>
@@ -40,7 +40,7 @@ export default function HubOAB() {
                <ShieldCheck size={180} color="rgba(255,255,255,0.05)" className="absolute" />
                <div className="relative z-10 text-center px-8">
                  <div className="text-4xl font-extrabold text-white mb-4">Marketing de Autoridade</div>
-                 <div className="text-[rgba(255,255,255,0.6)] text-lg">Sem panfletagem digital. Sem promessas irreais. Apenas posicionamento estratégico nos buscadores.</div>
+                 <div className="text-[rgba(255,255,255,0.85)] text-lg">Sem panfletagem digital. Sem promessas irreais. Apenas posicionamento estratégico nos buscadores.</div>
                </div>
              </div>
           </div>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const squad = [
   {
@@ -30,16 +31,26 @@ export default function Team() {
   return (
     <section className="section relative" style={{ background: "rgba(255,255,255,0.015)" }}>
       <div className="container-page">
-        <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center", marginBottom: "4rem" }}>
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center", marginBottom: "4rem" }}
+        >
           <h2 className="section-title">
             Aqui Não Existe <span>Amadorismo</span>
           </h2>
           <p className="section-subtitle">
             A Scale Company foi desenhada para profissionalizar o mercado. Você terá acesso a uma equipe executiva dedicada exclusivamente ao crescimento e controle do seu escritório.
           </p>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
           style={{
             display: "flex",
             width: "100%",
@@ -128,7 +139,7 @@ export default function Team() {
                 <p
                   style={{
                     fontSize: "0.85rem",
-                    color: "rgba(255,255,255,0.7)",
+                    color: "rgba(255,255,255,0.85)",
                     marginTop: "0.25rem",
                   }}
                 >
@@ -137,7 +148,35 @@ export default function Team() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
+
+        {/* Operational Head & Certifications */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 max-w-[900px] mx-auto bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.05)] rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-2xl"
+        >
+          <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 relative">
+            <Image 
+              src="/images/google-ads-badge.png" 
+              alt="Google Ads Search Certification Badge" 
+              fill 
+              style={{ objectFit: "contain" }} 
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <h3 className="text-xl font-bold text-white mb-2">Google Ads Search Certified</h3>
+            <p className="text-[rgba(255,255,255,0.85)] text-sm md:text-base leading-relaxed mb-4">
+              Nossas campanhas de captação de clientes são rigorosamente estruturadas por uma equipe especializada. A <strong className="text-white">Scale Company</strong> possui a credencial oficial do Google (Skillshop) atestando maestria em estratégias de Search, o que garante máxima performance e previsibilidade no retorno do seu investimento.
+            </p>
+            <div className="inline-block bg-[#3B82F6]/10 border border-[#3B82F6]/20 text-[#3B82F6] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+              Qualidade Validada pelo Google
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

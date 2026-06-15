@@ -1,27 +1,36 @@
 "use client";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useLeadForm } from "@/contexts/LeadFormContext";
 
 const navLinks = [
-  { label: "Serviços", href: "#servicos" },
-  { label: "Resultados", href: "#resultados" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Simulador de Captação", href: "/simulador-captacao" },
+  { label: "CRM Jurídico", href: "/crm-advogados" },
+  { label: "Depoimentos", href: "/depoimentos" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { open } = useLeadForm();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20);
+    const handler = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handler, { passive: true });
+    // Trigger handler immediately in case we load scrolled down
+    handler();
     return () => window.removeEventListener("scroll", handler);
   }, []);
+
+  const showNavbar = !isHome || scrolled || mobileOpen;
 
   return (
     <>
@@ -32,15 +41,18 @@ export default function Navbar() {
           left: 0,
           right: 0,
           zIndex: 99999,
-          transition: "all 0.3s ease",
-          backdropFilter: scrolled ? "blur(24px)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(24px)" : "none",
-          background: scrolled
+          transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+          backdropFilter: showNavbar ? "blur(24px)" : "none",
+          WebkitBackdropFilter: showNavbar ? "blur(24px)" : "none",
+          background: showNavbar
             ? "rgba(1, 15, 28, 0.90)"
             : "transparent",
-          borderBottom: scrolled
+          borderBottom: showNavbar
             ? "1px solid rgba(255,255,255,0.07)"
             : "1px solid transparent",
+          opacity: showNavbar ? 1 : 0,
+          transform: showNavbar ? "translateY(0)" : "translateY(-100%)",
+          pointerEvents: showNavbar ? "auto" : "none",
         }}
       >
       <div className="container-page" style={{ position: "relative", zIndex: 100000 }}>
@@ -54,7 +66,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a
-            href="#"
+            href="https://www.scalecompany.com.br/"
             aria-label="Scale Company — início"
             style={{ display: "flex", alignItems: "center" }}
           >
@@ -75,7 +87,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 style={{
-                  color: "rgba(255,255,255,0.65)",
+                  color: "rgba(255,255,255,0.85)",
                   fontSize: "0.9rem",
                   fontWeight: 500,
                   textDecoration: "none",
@@ -103,9 +115,9 @@ export default function Navbar() {
                 className="btn-shiny"
                 style={{ padding: "0.65rem 1.4rem", fontSize: "0.875rem" }}
               >
-                Agendar diagnóstico
-                <ArrowRight size={15} />
-              </button>
+  <WhatsAppIcon size={20} />
+  Agendar diagnóstico
+</button>
             </div>
 
             <button
@@ -186,7 +198,7 @@ export default function Navbar() {
             className="btn-shiny"
             style={{ width: "100%", padding: "1.25rem", fontSize: "1.1rem", display: "flex", justifyContent: "center", alignItems: "center", gap: "0.5rem" }}
           >
-            Agendar diagnóstico <ArrowRight size={20} />
+  Agendar diagnóstico <ArrowRight size={20} />
           </button>
         </div>
       </div>

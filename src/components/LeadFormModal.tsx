@@ -225,7 +225,7 @@ export function LeadFormModal() {
           onClick={close}
           style={{
             position: "absolute", right: "1rem", top: "1rem", zIndex: 10, borderRadius: "0.5rem", padding: "0.5rem",
-            color: "rgba(255,255,255,0.6)", background: "transparent", border: "none", cursor: "pointer"
+            color: "rgba(255,255,255,0.85)", background: "transparent", border: "none", cursor: "pointer"
           }}
           aria-label="Fechar"
         >
@@ -238,7 +238,7 @@ export function LeadFormModal() {
               <h2 id={titleId} style={{ paddingRight: "2rem", textAlign: "center", fontSize: "1.25rem", fontWeight: 700, color: "#fff", lineHeight: 1.3 }}>
                 Você está a poucos passos de tomar a decisão certa.
               </h2>
-              <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.9rem", color: "rgba(255,255,255,0.6)" }}>
+              <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}>
                 Preencha o formulário abaixo e receba o contato do nosso time comercial em instantes.
               </p>
 
@@ -309,8 +309,8 @@ export function LeadFormModal() {
                         style={{
                           display: "flex", cursor: "pointer", alignItems: "center", gap: "0.5rem", borderRadius: "0.5rem", border: "1px solid",
                           padding: "0.6rem 0.8rem", fontSize: "0.75rem", transition: "all 0.2s",
-                          borderColor: form.faturamento === opt.value ? "#00BAFF" : "rgba(255,255,255,0.1)",
-                          background: form.faturamento === opt.value ? "rgba(0,186,255,0.1)" : "rgba(255,255,255,0.03)",
+                          borderColor: form.faturamento === opt.value ? "#3B82F6" : "rgba(255,255,255,0.1)",
+                          background: form.faturamento === opt.value ? "rgba(59,130,246,0.1)" : "rgba(255,255,255,0.03)",
                           color: form.faturamento === opt.value ? "#fff" : "rgba(255,255,255,0.7)",
                           lineHeight: 1.2
                         }}
@@ -329,7 +329,7 @@ export function LeadFormModal() {
                   </div>
                   </fieldset>
 
-                  <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.6)", textAlign: "center", lineHeight: 1.4 }}>
+                  <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.85)", textAlign: "center", lineHeight: 1.4 }}>
                     O nosso time comercial entrará em contato em até <strong>5 minutos</strong> após o envio deste formulário.
                     <br />
                     <span style={{ fontSize: "0.65rem", opacity: 0.8 }}>*Válido para horários comerciais, exceto feriados e finais de semana.</span>
@@ -359,17 +359,17 @@ export function LeadFormModal() {
             <p style={{ fontSize: "1.25rem", fontWeight: 700, color: "#fff" }}>
               Tudo certo! Entraremos em contato com você em até 5 minutos.
             </p>
-            <p style={{ marginTop: "1rem", fontSize: "0.75rem", lineHeight: 1.6, color: "rgba(255,255,255,0.5)" }}>
+            <p style={{ marginTop: "1rem", fontSize: "0.75rem", lineHeight: 1.6, color: "rgba(255,255,255,0.85)" }}>
               *Válido apenas para horários comerciais, exceto feriados e finais de semana.
             </p>
-            <p style={{ marginTop: "1.5rem", fontSize: "0.875rem", color: "rgba(255,255,255,0.7)" }}>
+            <p style={{ marginTop: "1.5rem", fontSize: "0.875rem", color: "rgba(255,255,255,0.85)" }}>
               Enquanto isso acesse nosso Instagram e fique por dentro das novidades.
             </p>
             <a
               href="https://instagram.com/scalecompany"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ marginTop: "0.75rem", display: "inline-block", fontSize: "0.875rem", fontWeight: 600, color: "#00BAFF", textDecoration: "none" }}
+              style={{ marginTop: "0.75rem", display: "inline-block", fontSize: "0.875rem", fontWeight: 600, color: "#3B82F6", textDecoration: "none" }}
             >
               Instagram da Scale Company
             </a>

@@ -5,22 +5,22 @@ import Ecosystem from "@/components/Ecosystem";
 
 const machineSteps = [
   {
-    icon: <MonitorSmartphone size={20} color="#00BAFF" />,
+    icon: <MonitorSmartphone size={20} color="#3B82F6" />,
     title: "1. Hub de Conversão (Landing Page)",
     desc: "Seu site institucional não serve para captar clientes. Criamos páginas de alta velocidade focadas em conversão, desenhadas para receber tráfego frio e transformá-lo em contatos quentes no WhatsApp."
   },
   {
-    icon: <Search size={20} color="#00BAFF" />,
+    icon: <Search size={20} color="#3B82F6" />,
     title: "2. Rede de Pesquisa (Google Ads)",
     desc: "Posicionamos seu escritório exatamente no exato milissegundo em que um cliente em potencial digita 'advogado criminalista urgente' ou 'advogado especialista em divórcio'. Tráfego de intenção pura."
   },
   {
-    icon: <Video size={20} color="#00BAFF" />,
+    icon: <Video size={20} color="#3B82F6" />,
     title: "3. Retargeting e Autoridade (Meta Ads)",
     desc: "Aquele cliente que clicou no seu anúncio e não fechou na hora não pode ser esquecido. Distribuímos vídeos institucionais nas redes sociais para persegui-lo com autoridade até a decisão de contratação."
   },
   {
-    icon: <LineChart size={20} color="#00BAFF" />,
+    icon: <LineChart size={20} color="#3B82F6" />,
     title: "4. Qualificação e Previsibilidade (CRM)",
     desc: "Instalamos processos de triagem (filtros prévios) para bloquear curiosos. O seu time comercial recebe apenas leads qualificados, e tudo é rastreado para calcular seu Custo de Aquisição (CAC)."
   }
@@ -55,9 +55,9 @@ export default function HubSolution() {
                 borderTop: "1px solid rgba(255,255,255,0.1)",
               }}
             >
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-[1px] bg-gradient-to-r from-transparent via-[#00BAFF] to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-[1px] bg-gradient-to-r from-transparent via-[#3B82F6] to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
               
-              <div style={{ width: "40px", height: "40px", borderRadius: "10px", background: "rgba(0,186,255,0.08)", border: "1px solid rgba(0,186,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.25rem" }}>
+              <div style={{ width: "40px", height: "40px", borderRadius: "10px", background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.25rem" }}>
                  {step.icon}
               </div>
               <div>

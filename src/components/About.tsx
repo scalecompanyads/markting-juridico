@@ -32,7 +32,7 @@ export default function About() {
               >
                 <div 
                   className="absolute -top-4 -left-4 text-6xl"
-                  style={{ color: "rgba(0,186,255,0.2)", lineHeight: 1 }}
+                  style={{ color: "rgba(59,130,246,0.2)", lineHeight: 1 }}
                 >
                   "
                 </div>
@@ -47,7 +47,7 @@ export default function About() {
           <div className="w-full lg:w-[450px]">
             <div className="card-glass" style={{ padding: "3rem 2.5rem" }}>
               <div className="flex items-center gap-3 mb-8">
-                <ShieldCheck size={28} color="#00BAFF" />
+                <ShieldCheck size={28} color="#3B82F6" />
                 <h3 className="text-xl font-bold text-white">Registro Oficial</h3>
               </div>
               
@@ -61,9 +61,9 @@ export default function About() {
                     <Building size={20} color="rgba(255,255,255,0.5)" />
                   </div>
                   <div>
-                    <span className="block text-[0.85rem] font-medium text-[rgba(255,255,255,0.4)] mb-1 uppercase tracking-wider">Empresa</span>
+                    <span className="block text-[0.85rem] font-medium text-[rgba(255,255,255,0.85)] mb-1 uppercase tracking-wider">Empresa</span>
                     <strong className="text-white font-semibold">Scale Company</strong>
-                    <span className="block text-[0.9rem] text-[rgba(255,255,255,0.6)] mt-1">Digital Days LTDA</span>
+                    <span className="block text-[0.9rem] text-[rgba(255,255,255,0.85)] mt-1">Digital Days LTDA</span>
                   </div>
                 </div>
 
@@ -74,7 +74,7 @@ export default function About() {
                     <Briefcase size={20} color="rgba(255,255,255,0.5)" />
                   </div>
                   <div>
-                    <span className="block text-[0.85rem] font-medium text-[rgba(255,255,255,0.4)] mb-1 uppercase tracking-wider">CNPJ</span>
+                    <span className="block text-[0.85rem] font-medium text-[rgba(255,255,255,0.85)] mb-1 uppercase tracking-wider">CNPJ</span>
                     <strong className="text-white font-semibold font-mono tracking-wide">44.021.911/0001-70</strong>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function About() {
                     <MapPin size={20} color="rgba(255,255,255,0.5)" />
                   </div>
                   <div>
-                    <span className="block text-[0.85rem] font-medium text-[rgba(255,255,255,0.4)] mb-1 uppercase tracking-wider">Sede</span>
+                    <span className="block text-[0.85rem] font-medium text-[rgba(255,255,255,0.85)] mb-1 uppercase tracking-wider">Sede</span>
                     <strong className="text-white font-semibold">Vila Velha - ES</strong>
                   </div>
                 </div>

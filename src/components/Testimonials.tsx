@@ -1,29 +1,85 @@
 "use client";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 import Image from "next/image";
 import { useLeadForm } from "@/contexts/LeadFormContext";
 
-// Gerar array de 1 a 19 para os depoimentos
+// Gerar array de 1 a 19 para os depoimentos em imagem
 const testimonials = Array.from({ length: 19 }, (_, i) => ({
   id: i + 1,
   src: `/images/testimonials/testimonial-${String(i + 1).padStart(2, "0")}.png`,
 }));
 
+const landscapeVideos = [
+  { id: 1, title: "Depoimento Rafael - Bike Center", src: "https://www.youtube.com/embed/R3ID5_VP7Y8" },
+  { id: 2, title: "Depoimento Carlos Ângelo - Agência BRTM", src: "https://www.youtube.com/embed/6YA2xmW1Y4Y" },
+  { id: 3, title: "Depoimento Eduardo Macedo - Boxcar Motorsport", src: "https://www.youtube.com/embed/mVUz7iBpI6A" },
+];
+
+const portraitVideos = [
+  { id: 1, title: "Depoimento - Bichara", src: "https://www.youtube.com/embed/hZxR3DadbTg" },
+  { id: 2, title: "Depoimento - Vitor", src: "https://www.youtube.com/embed/4V0ArJKXb-4" },
+];
+
 export default function Testimonials() {
   const { open } = useLeadForm();
 
   return (
-    <section id="depoimentos" className="section" style={{ position: "relative", overflow: "hidden" }}>
-      <div className="glow-cyan" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "800px", height: "600px", opacity: 0.15 }} />
+    <section id="depoimentos" className="py-24 relative overflow-hidden bg-[#010a12]">
+      <div className="glow-cyan" style={{ position: "absolute", top: "20%", left: "50%", transform: "translate(-50%, -50%)", width: "800px", height: "600px", opacity: 0.15 }} />
 
       <div className="container-page relative z-10">
-        <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center", marginBottom: "4rem" }}>
-          <h2 className="section-title">
-            Resultados Reais de uma Agência de Marketing Jurídico de <span>Alta Performance</span>
+        <div className="max-w-[800px] mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
+            Resultados Reais de uma Agência de Marketing Jurídico de <span className="text-[#3B82F6]">Alta Performance</span>
           </h2>
-          <p className="section-subtitle">
-            Não são promessas vazias. São anos operando o crescimento de bancas por todo o Brasil.
+          <p className="text-[rgba(255,255,255,0.85)] text-lg leading-relaxed">
+            Não são promessas vazias. Ouça quem já validou o nosso método e experimentou o crescimento previsível de caixa.
           </p>
+        </div>
+
+        {/* --- VIDEO TESTIMONIALS --- */}
+        <div className="mb-24 space-y-16">
+          
+          {/* Landscape Videos (16:9) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {landscapeVideos.map((video) => (
+              <div key={video.id} className="relative w-full aspect-video rounded-xl overflow-hidden border border-[rgba(255,255,255,0.05)] shadow-2xl bg-[rgba(1,15,28,0.5)]">
+                <iframe 
+                  src={video.src} 
+                  title={video.title} 
+                  className="absolute top-0 left-0 w-full h-full"
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ))}
+          </div>
+
+          {/* Portrait Videos (9:16) */}
+          <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+            {portraitVideos.map((video) => (
+              <div key={video.id} className="relative w-full aspect-[9/16] max-w-[320px] mx-auto rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.05)] shadow-2xl bg-[rgba(1,15,28,0.5)]">
+                <iframe 
+                  src={video.src} 
+                  title={video.title} 
+                  className="absolute top-0 left-0 w-full h-full"
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+        {/* --- IMAGE TESTIMONIALS (MARQUEE) --- */}
+        <div className="text-center mb-10">
+          <h3 className="text-2xl font-bold text-white mb-2">E centenas de outros resultados...</h3>
         </div>
 
         {/* Marquee de depoimentos linha 1 */}
@@ -35,7 +91,7 @@ export default function Testimonials() {
               top: 0,
               bottom: 0,
               width: "150px",
-              background: "linear-gradient(to right, #010f1c, transparent)",
+              background: "linear-gradient(to right, #010a12, transparent)",
               zIndex: 10,
               pointerEvents: "none",
             }}
@@ -47,7 +103,7 @@ export default function Testimonials() {
               top: 0,
               bottom: 0,
               width: "150px",
-              background: "linear-gradient(to left, #010f1c, transparent)",
+              background: "linear-gradient(to left, #010a12, transparent)",
               zIndex: 10,
               pointerEvents: "none",
             }}
@@ -94,7 +150,7 @@ export default function Testimonials() {
               top: 0,
               bottom: 0,
               width: "150px",
-              background: "linear-gradient(to right, #010f1c, transparent)",
+              background: "linear-gradient(to right, #010a12, transparent)",
               zIndex: 10,
               pointerEvents: "none",
             }}
@@ -106,7 +162,7 @@ export default function Testimonials() {
               top: 0,
               bottom: 0,
               width: "150px",
-              background: "linear-gradient(to left, #010f1c, transparent)",
+              background: "linear-gradient(to left, #010a12, transparent)",
               zIndex: 10,
               pointerEvents: "none",
             }}
@@ -147,11 +203,11 @@ export default function Testimonials() {
         <div style={{ textAlign: "center", marginTop: "4rem" }}>
           <button 
             onClick={open}
-            className="btn-shiny"
-            style={{ padding: "1rem 2rem" }}
+            className="inline-flex items-center justify-center gap-2 bg-[#3B82F6] text-white font-bold text-sm md:text-base uppercase tracking-widest px-10 py-5 hover:bg-[#1630DF] transition-colors duration-300 rounded-sm"
           >
-            Quero ser o próximo case de sucesso
-          </button>
+  <WhatsAppIcon size={20} />
+  Quero ser o próximo case de sucesso
+</button>
         </div>
 
       </div>

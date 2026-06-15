@@ -1,4 +1,5 @@
 "use client";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 import { useState } from "react";
 import { Plus, Minus, ArrowRight } from "lucide-react";
@@ -49,7 +50,7 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
-        <span style={{ paddingRight: "1rem" }}>{question}</span>
+  <span style={{ paddingRight: "1rem" }}>{question}</span>
         <span 
           style={{
             display: "flex",
@@ -63,9 +64,9 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
             transition: "all 0.2s"
           }}
         >
-          {open ? <Minus size={14} color="#00BAFF" /> : <Plus size={14} color="rgba(255,255,255,0.5)" />}
+          {open ? <Minus size={14} color="#3B82F6" /> : <Plus size={14} color="rgba(255,255,255,0.5)" />}
         </span>
-      </button>
+</button>
       
       <div 
         style={{
@@ -105,9 +106,9 @@ export default function FAQ() {
             onClick={open}
             className="btn-shiny"
           >
-            Agendar diagnóstico da sua captação
-            <ArrowRight size={18} />
-          </button>
+  <WhatsAppIcon size={20} />
+  Agendar diagnóstico da sua captação
+</button>
         </div>
       </div>
     </section>

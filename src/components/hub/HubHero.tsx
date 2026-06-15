@@ -1,4 +1,5 @@
 "use client";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 import { ArrowRight } from "lucide-react";
 import { useLeadForm } from "@/contexts/LeadFormContext";
@@ -25,14 +26,14 @@ export default function HubHero() {
       <div className="container-page relative z-10">
         <div className="flex flex-col items-center text-center gap-10">
           
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(0,186,255,0.3)] bg-[rgba(0,186,255,0.08)] text-[0.75rem] font-bold text-[#00BAFF] tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#00BAFF] block" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(59,130,246,0.3)] bg-[rgba(59,130,246,0.08)] text-[0.75rem] font-bold text-[#3B82F6] tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#3B82F6] block" />
             O Guia Definitivo 2026
           </div>
 
           <h1 className="text-[clamp(2.4rem,5.5vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight max-w-[1000px] m-0 text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-400">
             Como Captar Clientes na Advocacia{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#00BAFF] to-[#1630DF]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#3B82F6] to-[#1630DF]">
               Sem Depender de Indicação.
             </span>
           </h1>
@@ -41,7 +42,7 @@ export default function HubHero() {
             Enquanto você espera o telefone tocar, o seu concorrente está pagando menos de R$ 20 por um contato qualificado no Google Ads. 
           </p>
 
-          <p className="text-[1.05rem] text-[rgba(255,255,255,0.6)] max-w-[700px] leading-relaxed m-0">
+          <p className="text-[1.05rem] text-[rgba(255,255,255,0.85)] max-w-[700px] leading-relaxed m-0">
             Descubra por que a maioria dos escritórios perde dinheiro na internet e aprenda a estruturar uma verdadeira Máquina de Aquisição que obedece 100% ao código de ética da OAB.
           </p>
 
@@ -50,10 +51,10 @@ export default function HubHero() {
               onClick={open}
               className="btn-shiny px-10 py-4 text-[1.05rem]"
             >
-              Quero Estruturar Minha Captação Agora
-              <ArrowRight size={18} />
-            </button>
-            <span className="text-sm text-[rgba(255,255,255,0.4)]">
+  <WhatsAppIcon size={20} />
+  Quero Estruturar Minha Captação Agora
+</button>
+            <span className="text-sm text-[rgba(255,255,255,0.85)]">
               Ou continue rolando para ler o guia definitivo.
             </span>
           </div>

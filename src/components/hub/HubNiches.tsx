@@ -18,11 +18,11 @@ const niches = [
     color: "#f59e0b"
   },
   {
-    icon: <Scale size={28} color="#00BAFF" />,
+    icon: <Scale size={28} color="#3B82F6" />,
     title: "Direito de Família e Sucessões (Funil de Confiança e Discrição)",
     behavior: "Situações delicadas (divórcio, inventário, guarda). O cliente precisa ter certeza absoluta de quem está contratando antes de iniciar a conversa.",
     strategy: "Landing Pages com forte apelo visual, forte quebra de objeções na própria página, uso de vídeos de retargeting para construir autoridade contínua.",
-    color: "#00BAFF"
+    color: "#3B82F6"
   },
   {
     icon: <Building2 size={28} color="#10b981" />,
@@ -71,11 +71,11 @@ export default function HubNiches() {
 
               <div className="flex flex-col gap-4">
                 <div>
-                  <h4 className="text-sm font-bold text-[rgba(255,255,255,0.4)] tracking-widest uppercase mb-1">O Comportamento:</h4>
+                  <h4 className="text-sm font-bold text-[rgba(255,255,255,0.85)] tracking-widest uppercase mb-1">O Comportamento:</h4>
                   <p className="text-[rgba(255,255,255,0.85)] leading-relaxed m-0">{niche.behavior}</p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[rgba(255,255,255,0.4)] tracking-widest uppercase mb-1">A Estratégia:</h4>
+                  <h4 className="text-sm font-bold text-[rgba(255,255,255,0.85)] tracking-widest uppercase mb-1">A Estratégia:</h4>
                   <p className="text-[rgba(255,255,255,0.85)] leading-relaxed m-0">{niche.strategy}</p>
                 </div>
               </div>

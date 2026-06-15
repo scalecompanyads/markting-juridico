@@ -25,10 +25,10 @@ export default function HubStats() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, idx) => (
             <div key={idx} className="flex flex-col items-center text-center p-6 bg-[rgba(255,255,255,0.02)] rounded-2xl border border-[rgba(255,255,255,0.05)]">
-              <span className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#00BAFF] to-[#1630DF] mb-4">
+              <span className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#1630DF] mb-4">
                 {stat.value}
               </span>
-              <p className="text-[rgba(255,255,255,0.7)] text-sm leading-relaxed m-0">
+              <p className="text-[rgba(255,255,255,0.85)] text-sm leading-relaxed m-0">
                 {stat.label}
               </p>
             </div>

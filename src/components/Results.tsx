@@ -1,4 +1,5 @@
 "use client";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -63,7 +64,7 @@ export default function Results() {
                <h3 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", marginBottom: "0.5rem" }}>
                  Operação Comercial e Marketing
                </h3>
-               <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.95rem", maxWidth: "400px" }}>
+               <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.95rem", maxWidth: "400px" }}>
                  Alinhamento constante entre campanhas e o time de fechamento do seu escritório.
                </p>
             </div>
@@ -106,7 +107,7 @@ export default function Results() {
                     alignItems: "center",
                     justifyContent: "center",
                     margin: "0 auto 1rem",
-                    color: "#00BAFF",
+                    color: "#3B82F6",
                     fontWeight: 800,
                     fontSize: "1.1rem"
                   }}
@@ -128,9 +129,9 @@ export default function Results() {
               onClick={open}
               className="btn-shiny"
             >
-              Agendar diagnóstico e ver processo
-              <ArrowRight size={18} />
-            </button>
+  <WhatsAppIcon size={20} />
+  Agendar diagnóstico e ver processo
+</button>
           </div>
         </div>
 

@@ -15,14 +15,14 @@ export default function Hero() {
     <section className="relative h-[100svh] md:h-screen flex flex-col overflow-hidden bg-[#020b16] md:pb-0">
       
       {/* Mobile Image Container */}
-      <div className="relative w-full md:hidden flex-shrink-0 h-[35vh] max-h-[300px]">
+      <div className="absolute top-0 inset-x-0 w-full md:hidden h-[45vh] z-0">
         <img 
           src="/images/hero-mobile-bg.png" 
           alt="Scale Company" 
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-[center_10%]"
         />
         {/* Mobile Overlay: Apenas na metade de baixo para não invadir o rosto/topo */}
-        <div className="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-[#020b16] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-[#020b16] to-transparent" />
       </div>
 
       {/* Desktop Background Image */}
@@ -33,7 +33,8 @@ export default function Hero() {
       {/* Desktop Overlay */}
       <div className="hidden md:block absolute inset-y-0 left-0 w-[60%] bg-gradient-to-r from-[#020b16] via-[#020b16]/90 to-transparent z-0" />
 
-      <div className="container-page relative z-10 w-full flex-grow flex flex-col justify-center pb-4 pt-2 md:py-0">
+      {/* Content Container */}
+      <div className="container-page relative z-10 w-full flex-grow flex flex-col justify-end md:justify-center pb-2 pt-[30vh] md:py-0">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

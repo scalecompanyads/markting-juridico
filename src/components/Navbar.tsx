@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Serviços", href: "/servicos" },
   { label: "Simulador de Captação", href: "/simulador-captacao" },
   { label: "CRM Jurídico", href: "/crm-advogados" },
+  { label: "Blog", href: "/blog" },
   { label: "Depoimentos", href: "/depoimentos" },
 ];
 

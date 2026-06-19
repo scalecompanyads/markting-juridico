@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import './scale-advogados.css';
 import { legalAreas, oabCompliance, acquisitionPillars, technologyImpactCards, legalTeam, legalProofAssets, legalOffer } from '@/data/legalSeo';
 import ScaleAdvogadosV3Hero from '@/components/legal/ScaleAdvogadosV3Hero';
+import { Footer } from '@/components/Footer';
 import { MousePointerClick, Gauge, LineChart, Layers, PlayCircle, Shield, Target, TrendingUp, Users, Scale, MessageCircle, FileText, CheckCircle2, ChevronRight, BarChart3, Smartphone, Zap, Search, Eye, Building2, Briefcase, Calculator, Handshake, Users2, Building, Scale as ScaleIcon, ArrowRight, ShieldCheck, Mail, Key } from 'lucide-react';
 
 const conversionCards = [
@@ -1028,14 +1029,7 @@ export default function ScaleAdvogadosPage() {
     </div>
   </div>
 
-  
-
-  
-  
-  
-
-  
-
+  <Footer />
 
     </>
   );

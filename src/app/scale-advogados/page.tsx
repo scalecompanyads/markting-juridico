@@ -5,7 +5,6 @@ import React, { useEffect } from 'react';
 import './scale-advogados.css';
 import { legalAreas, oabCompliance, acquisitionPillars, technologyImpactCards, legalTeam, legalProofAssets, legalOffer } from '@/data/legalSeo';
 import ScaleAdvogadosV3Hero from '@/components/legal/ScaleAdvogadosV3Hero';
-import { Footer } from '@/components/Footer';
 import { MousePointerClick, Gauge, LineChart, Layers, PlayCircle, Shield, Target, TrendingUp, Users, Scale, MessageCircle, FileText, CheckCircle2, ChevronRight, BarChart3, Smartphone, Zap, Search, Eye, Building2, Briefcase, Calculator, Handshake, Users2, Building, Scale as ScaleIcon, ArrowRight, ShieldCheck, Mail, Key } from 'lucide-react';
 
 const conversionCards = [
@@ -1029,7 +1028,12 @@ export default function ScaleAdvogadosPage() {
     </div>
   </div>
 
-  <Footer />
+  <footer style={{ padding: '2rem 1rem', background: '#0d0d14', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', justifyContent: 'center' }}>
+      <p>© {new Date().getFullYear()} Scale Company. Todos os direitos reservados.</p>
+      <p>CNPJ: 44.021.911/0001-70</p>
+    </div>
+  </footer>
 
     </>
   );

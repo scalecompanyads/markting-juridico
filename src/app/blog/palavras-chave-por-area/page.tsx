@@ -14,7 +14,7 @@ export default function BlogPost() {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col min-h-screen bg-[#010f1c] text-white pt-32 pb-20">
+      <main className="flex flex-col min-h-screen bg-slate-50 text-slate-900 pt-32 pb-20">
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           
           {/* Header do Post */}
@@ -24,7 +24,7 @@ export default function BlogPost() {
               Voltar para o Blog
             </Link>
             
-            <div className="flex flex-wrap items-center gap-4 text-sm text-[rgba(255,255,255,0.5)] mb-6">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 mb-6">
               <div className="flex items-center gap-1.5">
                 <Tag className="w-4 h-4 text-blue-500" />
                 <span>Estratégia de Conteúdo</span>
@@ -43,17 +43,17 @@ export default function BlogPost() {
               Palavras-chave e Ideias de Artigos por Área de Atuação na Advocacia
             </h1>
             
-            <p className="text-xl text-[rgba(255,255,255,0.7)] leading-relaxed border-l-4 border-blue-500 pl-6 py-2 mb-10">
+            <p className="text-xl text-slate-600 leading-relaxed border-l-4 border-blue-500 pl-6 py-2 mb-10">
               Mostrar as palavras-chave e sugestões de artigos separados por área de atuação funciona como uma "amostra grátis" do seu conhecimento. O advogado que acessar sua página vai pensar: "Eles realmente entendem do meu nicho e sabem o que o meu cliente pesquisa".
             </p>
 
-            <div className="w-full h-64 md:h-[400px] rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <div className="w-full h-64 md:h-[400px] rounded-3xl overflow-hidden border border-slate-200 shadow-2xl">
               <img src="/images/blog-keywords.png" alt="Estratégia de Palavras-chave na Advocacia" className="w-full h-full object-cover" />
             </div>
           </header>
 
           {/* Conteúdo */}
-          <div className="prose prose-invert prose-lg max-w-none text-[rgba(255,255,255,0.8)]">
+          <div className="prose prose-slate prose-lg max-w-none text-slate-700">
             <p className="mb-8">
               Muitos advogados cometem o erro de criar textos institucionais e genéricos. O cliente, no entanto, sempre busca uma resposta exata para o problema que ele está vivendo. Criar conteúdo específico para o fundo e meio do funil faz toda a diferença na conversão.
             </p>
@@ -61,9 +61,9 @@ export default function BlogPost() {
               Abaixo, detalhamos as melhores estratégias e palavras-chave de acordo com as principais áreas de atuação. Para evitar um texto gigantesco, separamos o conteúdo de forma interativa. Clique na área que mais interessa ao seu escritório:
             </p>
             {/* CTA Inline 1 */}
-            <div className="not-prose my-12 p-8 rounded-2xl bg-[#021626] border border-blue-900/30 text-center shadow-lg">
-              <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">Não sabe como encontrar essas palavras para o seu nicho?</h3>
-              <p className="text-[rgba(255,255,255,0.7)] mb-6 max-w-xl mx-auto">
+            <div className="not-prose my-12 p-8 rounded-2xl bg-white border border-blue-200 text-center shadow-lg">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-slate-900">Não sabe como encontrar essas palavras para o seu nicho?</h3>
+              <p className="text-slate-600 mb-6 max-w-xl mx-auto">
                 Nossa equipe de marketing jurídico já mapeou as melhores oportunidades de tráfego para a sua área de atuação.
               </p>
               <Link href="/google-ads-advogados" className="inline-flex px-6 py-3 bg-[#3B82F6] text-white font-bold text-sm uppercase tracking-wider rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
@@ -77,7 +77,7 @@ export default function BlogPost() {
               <AreasAccordion />
             </div>
 
-            <h2 className="text-2xl font-bold text-white mt-16 mb-6">Como aplicar essas ideias na prática?</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mt-16 mb-6">Como aplicar essas ideias na prática?</h2>
             <p className="mb-6">
               Essas ideias de conteúdo e palavras-chave devem ser a espinha dorsal das suas campanhas de <strong>Google Ads</strong> e do conteúdo da sua <strong>Landing Page</strong>.
             </p>
@@ -87,9 +87,9 @@ export default function BlogPost() {
           </div>
 
           {/* CTA do Artigo */}
-          <div className="mt-20 p-8 rounded-2xl bg-gradient-to-br from-[#021626] to-[#010f1c] border border-blue-900/30 text-center">
+          <div className="mt-20 p-8 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-blue-200 text-center">
             <h3 className="text-2xl font-bold mb-4">Precisa de ajuda para estruturar essas campanhas?</h3>
-            <p className="text-[rgba(255,255,255,0.7)] mb-8">
+            <p className="text-slate-600 mb-8">
               A Scale Company aplica essa mesma metodologia e segmentação para todos os nossos escritórios parceiros.
             </p>
             <Link href="/google-ads-advogados#contato" className="inline-flex px-8 py-4 bg-[#3B82F6] text-white font-bold rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">

@@ -13,6 +13,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "neuromarketing-juridico",
+    title: "Neuromarketing Jurídico: A Ciência Comportamental por trás do 'Sim' na Assinatura de Honorários",
+    excerpt:
+      "Descubra como estruturar sua comunicação e sua proposta de honorários para que o cérebro do seu cliente diga 'sim' antes mesmo de ler a última página do contrato.",
+    date: "24 de Junho de 2026",
+    category: "Vendas & Fechamento",
+    image: "/images/blog/neuromarketing-juridico/hero_capa_v2.png",
+    imageAlt:
+      "Cérebro iluminado por conexões neurais sobreposto a um contrato jurídico e caneta-tinteiro",
+  },
+  {
     slug: "melhor-agencia-marketing-juridico",
     title: "Qual a Melhor Agência de Marketing Jurídico do Brasil? (Comparativo 2026)",
     excerpt:

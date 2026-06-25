@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import AreasAccordion from "@/components/AreasAccordion";
+import { CTAButton } from "@/components/ui/CTAButton";
 import { ArrowRight, Calendar, User, Tag } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -66,10 +67,10 @@ export default function BlogPost() {
               <p className="text-slate-600 mb-6 max-w-xl mx-auto">
                 Nossa equipe de marketing jurídico já mapeou as melhores oportunidades de tráfego para a sua área de atuação.
               </p>
-              <Link href="/google-ads-advogados" className="inline-flex px-6 py-3 bg-[#3B82F6] text-white font-bold text-sm uppercase tracking-wider rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
+              <CTAButton className="inline-flex px-6 py-3 bg-[#3B82F6] text-white font-bold text-sm uppercase tracking-wider rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
                 FALAR COM UM ESPECIALISTA
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </CTAButton>
             </div>
             
             {/* Componente Interativo de Abas/Acordeão */}
@@ -92,10 +93,10 @@ export default function BlogPost() {
             <p className="text-slate-600 mb-8">
               A Scale Company aplica essa mesma metodologia e segmentação para todos os nossos escritórios parceiros.
             </p>
-            <Link href="/google-ads-advogados#contato" className="inline-flex px-8 py-4 bg-[#3B82F6] text-white font-bold rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
+            <CTAButton className="inline-flex px-8 py-4 bg-[#3B82F6] text-white font-bold rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
               Quero estruturar meu Marketing Jurídico
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </CTAButton>
           </div>
 
         </article>

@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, User, Tag, CheckCircle2, XCircle, BarChart3, Mess
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
+import { CTAButton } from "@/components/ui/CTAButton";
 
 const testimonials = Array.from({ length: 19 }, (_, i) => ({
   id: i + 1,
@@ -140,10 +141,10 @@ export default function BlogPost() {
               <p className="text-slate-600 mb-6 max-w-xl mx-auto">
                 Nossa equipe cria campanhas validadas na OAB que colocam seu escritório na frente de quem já está buscando por um advogado.
               </p>
-              <Link href="/google-ads-advogados" className="inline-flex px-6 py-3 bg-[#3B82F6] text-white font-bold text-sm uppercase tracking-wider rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
+              <CTAButton className="inline-flex px-6 py-3 bg-[#3B82F6] text-white font-bold text-sm uppercase tracking-wider rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
                 AGENDAR DIAGNÓSTICO
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </CTAButton>
             </div>
             <h2 className="text-2xl font-bold text-slate-900 mt-16 mb-6">Tabela Comparativa: Scale Company x Agência Padrão</h2>
             <p className="mb-6">
@@ -266,10 +267,10 @@ export default function BlogPost() {
             <p className="text-slate-600 mb-8">
               Faça como os escritórios que mais crescem no Brasil. Pare de gastar com cliques vazios e comece a investir na construção do seu patrimônio digital.
             </p>
-            <Link href="/google-ads-advogados#contato" className="inline-flex px-8 py-4 bg-[#3B82F6] text-white font-bold text-sm md:text-base uppercase tracking-widest rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
+            <CTAButton className="inline-flex px-8 py-4 bg-[#3B82F6] text-white font-bold text-sm md:text-base uppercase tracking-widest rounded hover:bg-[#2563EB] transition-colors items-center justify-center gap-2">
               QUERO AGENDAR UM DIAGNÓSTICO GRATUITO COM A SCALE COMPANY
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </CTAButton>
           </div>
 
         </article>

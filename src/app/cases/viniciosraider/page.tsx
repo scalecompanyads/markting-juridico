@@ -4,6 +4,8 @@ import { ArrowRight, Calendar, User, Tag, Briefcase, TrendingUp } from "lucide-r
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { CTAButton } from "@/components/ui/CTAButton";
 
 export const metadata: Metadata = {
   title: "Case de Sucesso: Dr. Vinício Rodrigues | Scale Marketing",
@@ -191,13 +193,13 @@ export default function CaseStudyPage() {
             <p className="text-[rgba(255,255,255,0.7)] mb-10 max-w-2xl">
               Nossa equipe estrutura desde o seu site até as campanhas de fundo de funil para atrair os melhores clientes da sua região.
             </p>
-            <Link href="/google-ads-advogados#contato" className="relative group inline-flex">
+            <CTAButton className="relative group inline-flex text-left">
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-green-400 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
               <div className="relative inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-bold text-sm md:text-base uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all transform hover:scale-105 shadow-xl">
                 <Calendar className="w-5 h-5" />
                 AGENDAR DIAGNÓSTICO COM A SCALE
               </div>
-            </Link>
+            </CTAButton>
           </div>
 
         </article>

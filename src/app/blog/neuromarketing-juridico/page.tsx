@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ArrowRight, Calendar, User, Tag } from "lucide-react";
+import { CTAButton } from "@/components/ui/CTAButton";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -214,13 +215,13 @@ export default function BlogPost() {
             <p className="text-slate-600 mb-10 max-w-2xl">
               O marketing atrai, mas a inteligência de negócios é o que fecha o contrato. Se o seu escritório precisa de uma arquitetura de crescimento de ponta a ponta, a Scale pode ajudar.
             </p>
-            <Link href="/google-ads-advogados#contato" className="relative group inline-flex">
+            <CTAButton className="relative group inline-flex text-left">
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-green-400 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
               <div className="relative inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-bold text-sm md:text-base uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all transform hover:scale-105 shadow-xl">
                 <Calendar className="w-5 h-5" />
                 AGENDAR DIAGNÓSTICO COM A SCALE
               </div>
-            </Link>
+            </CTAButton>
           </div>
 
         </article>

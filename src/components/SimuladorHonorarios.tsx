@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ArrowRight, Calculator, CheckCircle2, LineChart, Target, X } from "lucide-react";
+import { useLeadForm } from "@/contexts/LeadFormContext";
 
 type Scenario = "pessimista" | "realista" | "otimista";
 
@@ -22,6 +23,7 @@ const SCENARIO_MULTIPLIERS = {
 };
 
 export default function SimuladorHonorarios() {
+  const { open } = useLeadForm();
   const [activeStep, setActiveStep] = useState(0);
   const [area, setArea] = useState<keyof typeof AREAS>("familia");
   const [investment, setInvestment] = useState(3000);
@@ -360,9 +362,9 @@ export default function SimuladorHonorarios() {
                      Para atingir sua meta de {formatBRL(goal)} com esse cenário, o investimento ideal em anúncios seria em torno de <strong className="text-white">{formatBRL(requiredInvestment)}</strong> mensais.
                    </p>
                  </div>
-                 <a href="/contato" className="flex-shrink-0 w-full md:w-auto text-center px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition-colors">
+                 <button onClick={open} className="flex-shrink-0 w-full md:w-auto text-center px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition-colors">
                    Agendar Reunião de Aceleração
-                 </a>
+                 </button>
                </div>
 
             </div>

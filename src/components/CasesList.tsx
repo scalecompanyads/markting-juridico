@@ -12,6 +12,15 @@ export default function CasesList() {
       result: '+ R$ 10.500 em 30 dias',
       slug: '/cases/viniciosraider',
       image: '/cases/viniciosraider/Captura%20de%20tela%202026-06-25%20111519.png'
+    },
+    {
+      id: 'celino-e-silva',
+      title: 'Virada de Jogo no Google Ads, Diagnóstico de Performance e Expansão',
+      client: 'Celino e Silva Advocacia',
+      niche: 'Direito de Família',
+      result: '10 contratos + 40 leads',
+      slug: '/cases/celino-e-silva',
+      image: '/cases/celino-e-silva/image.png'
     }
   ];
 

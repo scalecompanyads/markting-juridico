@@ -12,9 +12,11 @@ export const metadata: Metadata = {
 
 export default function CaseStudyPage() {
   const caseImages = [
-    "/cases/viniciosraider/Captura de tela 2026-06-25 111230.png",
-    "/cases/viniciosraider/Captura de tela 2026-06-25 111239.png",
-    "/cases/viniciosraider/Captura de tela 2026-06-25 111249.png"
+    "/cases/viniciosraider/Group 10.png",
+    "/cases/viniciosraider/Group 12.png",
+    "/cases/viniciosraider/Group 13.png",
+    "/cases/viniciosraider/Group 14.png",
+    "/cases/viniciosraider/Group 15.png"
   ];
 
   return (

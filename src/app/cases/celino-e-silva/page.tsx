@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ArrowRight, Calendar, User, Tag, Briefcase, TrendingUp } from "lucide-react";
+import { ArrowRight, Calendar, User, Tag, Briefcase, TrendingUp, Search } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";

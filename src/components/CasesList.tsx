@@ -21,6 +21,15 @@ export default function CasesList() {
       result: '10 contratos + 40 leads',
       slug: '/cases/celino-e-silva',
       image: '/cases/celino-e-silva/image.png'
+    },
+    {
+      id: 'rocha-e-sa',
+      title: 'Tração Acelerada e o Poder do Follow-up: 3 Contratos Fechados em 4 Dias',
+      client: 'Rocha & Sá',
+      niche: 'Direito de Família',
+      result: '3 contratos em 4 dias',
+      slug: '/cases/rocha-e-sa',
+      image: '/cases/rocha-e-sa/cover-2.png'
     }
   ];
 

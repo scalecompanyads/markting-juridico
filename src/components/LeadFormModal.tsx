@@ -215,7 +215,7 @@ export function LeadFormModal() {
         aria-labelledby={titleId}
         style={{
           position: "relative", display: "flex", width: "100%", maxWidth: "32rem", flexDirection: "column",
-          overflow: "hidden", borderRadius: "1.25rem", border: "1px solid rgba(255,255,255,0.12)", background: "#010f1c",
+          maxHeight: "90vh", overflowY: "auto", borderRadius: "1.25rem", border: "1px solid rgba(255,255,255,0.12)", background: "#010f1c",
           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
         }}
         onMouseDown={(e) => e.stopPropagation()}

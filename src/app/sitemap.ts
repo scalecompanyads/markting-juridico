@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/blog/melhor-agencia-marketing-juridico',
     '/blog/palavras-chave-por-area',
+    '/cases/rocha-e-sa',
   ];
 
   return routes.map((route) => ({

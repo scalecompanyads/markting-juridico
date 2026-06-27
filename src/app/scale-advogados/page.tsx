@@ -962,7 +962,7 @@ export default function ScaleAdvogadosPage() {
 
   {/*  ===== LEAD FORM MODAL =====  */}
   <div id="scale-form-modal" role="dialog" aria-modal="true" aria-labelledby="scale-form-modal-title" style={{ position: 'fixed', inset: '0', zIndex: '10000', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: 'rgba(0,0,0,.6)', backdropFilter: 'blur(12px)', opacity: '0', pointerEvents: 'none', transition: 'opacity .25s ease' }}>
-    <div style={{ position: 'relative', width: '100%', maxWidth: '480px', background: '#0d0d14', border: '1px solid rgba(255,255,255,.1)', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,.7)' }} onMouseDown={(event) => { if(event) event.stopPropagation() }}>
+    <div style={{ position: 'relative', width: '100%', maxWidth: '480px', maxHeight: '90vh', overflowY: 'auto', background: '#0d0d14', border: '1px solid rgba(255,255,255,.1)', borderRadius: '20px', boxShadow: '0 32px 80px rgba(0,0,0,.7)' }} onMouseDown={(event) => { if(event) event.stopPropagation() }}>
 
       {/*  Close  */}
       <button type="button" id="scale-form-modal-close" aria-label="Fechar" style={{ position: 'absolute', right: '14px', top: '14px', background: 'rgba(255,255,255,.08)', border: 'none', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#fff', fontSize: '18px', lineHeight: '1', zIndex: '2' }}>&#x2715;</button>
